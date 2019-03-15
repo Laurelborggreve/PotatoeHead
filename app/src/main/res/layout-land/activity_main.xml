@@ -208,6 +208,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Mr. Potato Head"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/frameLayout"
         app:layout_constraintEnd_toEndOf="parent"

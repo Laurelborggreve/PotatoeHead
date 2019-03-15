@@ -17,9 +17,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    // Method to save the state
     @Override
     public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState); // always call super
+        super.onSaveInstanceState(outState);
 
         outState.putInt("Arms_Visibility", findViewById(R.id.arms_img).getVisibility());
         outState.putInt("Ears_Visibility", findViewById(R.id.ears_img).getVisibility());
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt("Shoes_Visibility", findViewById(R.id.shoes_img).getVisibility());
     }
 
+    // Method to store the state
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -53,11 +55,10 @@ public class MainActivity extends AppCompatActivity {
         Log.d("potato", "checkClicked: ");
         CheckBox checkbox = (CheckBox) view;
 
-        // Is the checkbox checked?
+        // Check if checkbox is is checked
         boolean checked = checkbox.isChecked();
-   //     String CheckBoxName = checkbox.getText().toString();
 
-        // Check which checkbox is checked and show image if checked
+        // Check which checkbox is checked and show image the corresponding image
         switch (view.getId()) {
             case R.id.Arms:
                 if (checked)
